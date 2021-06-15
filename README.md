@@ -8,5 +8,5 @@ yarn workspace til-frontend dev
 
 backend 시작
 ```shell
-yarn workspace til-backend dev
+yarn workspace til-backend start:dev
 ```
