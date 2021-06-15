@@ -1265,6 +1265,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/codemirror@npm:^5.60.0":
+  version: 5.60.0
+  resolution: "@types/codemirror@npm:5.60.0"
+  dependencies:
+    "@types/tern": "*"
+  checksum: 044ed77def4887b4917a4d4ba874dc2f9e6c6ba794cf437c2feb642a5bf4009aa34a19c819166315b697900f1abee955e6176f1cb259e4cbaf395ca66e0f1eb8
+  languageName: node
+  linkType: hard
+
 "@types/connect@npm:*":
   version: 3.4.34
   resolution: "@types/connect@npm:3.4.34"
@@ -1510,6 +1519,15 @@ __metadata:
   dependencies:
     "@types/superagent": "*"
   checksum: a4b001038d8972d9efbfe73590961718f59923ed9c44356a0280e7a042dd1862cc9ea4c8a5c1ef3f7813f25e8b3b0b483bdafec089efe544c12207763c8ea6b1
+  languageName: node
+  linkType: hard
+
+"@types/tern@npm:*":
+  version: 0.23.3
+  resolution: "@types/tern@npm:0.23.3"
+  dependencies:
+    "@types/estree": "*"
+  checksum: 60b406943883b329a31be6d1df9c9980688c6add3533d8ad8f8d18b5ec7829a3997e012b31e62a74be216b60b2e2678fd543bc8983da1c57fa71c831374a708f
   languageName: node
   linkType: hard
 
@@ -2883,6 +2901,13 @@ __metadata:
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
   checksum: 7d9837296e0f1c00239c88542f5a3e0bad11e45d3d0e8d9d097901fe54722dd5d2c006969077a287be8648a202c43f74e096f17552cbd897568308fba7b87ac0
+  languageName: node
+  linkType: hard
+
+"codemirror@npm:^5.61.1":
+  version: 5.61.1
+  resolution: "codemirror@npm:5.61.1"
+  checksum: 4303451a8230742af2e4993e1606652d6056bd0b67d071d8d161fd5a5de42db9e893577854e1e2addf8ba8e1c1144be7b5b7e6c8f15e6a6e518930197d4c4812
   languageName: node
   linkType: hard
 
@@ -9092,8 +9117,10 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
+    "@types/codemirror": ^5.60.0
     "@types/node": ^15.12.2
     "@types/react": ^17.0.11
+    codemirror: ^5.61.1
     next: 10.2.3
     react: 17.0.2
     react-dom: 17.0.2

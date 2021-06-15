@@ -1717,6 +1717,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/codemirror", [
+        ["npm:5.60.0", {
+          "packageLocation": "./.yarn/cache/@types-codemirror-npm-5.60.0-d2ded21f13-044ed77def.zip/node_modules/@types/codemirror/",
+          "packageDependencies": [
+            ["@types/codemirror", "npm:5.60.0"],
+            ["@types/tern", "npm:0.23.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/connect", [
         ["npm:3.4.34", {
           "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.34-39e4f7bb55-6f712a0408.zip/node_modules/@types/connect/",
@@ -2004,6 +2014,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/supertest", "npm:2.0.11"],
             ["@types/superagent", "npm:4.1.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/tern", [
+        ["npm:0.23.3", {
+          "packageLocation": "./.yarn/cache/@types-tern-npm-0.23.3-42b52a2205-60b4069438.zip/node_modules/@types/tern/",
+          "packageDependencies": [
+            ["@types/tern", "npm:0.23.3"],
+            ["@types/estree", "npm:0.0.48"]
           ],
           "linkType": "HARD",
         }]
@@ -3654,6 +3674,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/code-point-at-npm-1.1.0-37de5fe566-7d9837296e.zip/node_modules/code-point-at/",
           "packageDependencies": [
             ["code-point-at", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["codemirror", [
+        ["npm:5.61.1", {
+          "packageLocation": "./.yarn/cache/codemirror-npm-5.61.1-95ad2a55dd-4303451a82.zip/node_modules/codemirror/",
+          "packageDependencies": [
+            ["codemirror", "npm:5.61.1"]
           ],
           "linkType": "HARD",
         }]
@@ -10750,8 +10779,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["til-frontend", "workspace:packages/frontend"],
             ["@emotion/react", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:11.4.0"],
             ["@emotion/styled", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:11.3.0"],
+            ["@types/codemirror", "npm:5.60.0"],
             ["@types/node", "npm:15.12.2"],
             ["@types/react", "npm:17.0.11"],
+            ["codemirror", "npm:5.61.1"],
             ["next", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:10.2.3"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:17.0.2"],
