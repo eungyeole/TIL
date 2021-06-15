@@ -1,5 +1,5 @@
 # TIL
-yarn berry workspace 기능을 사용하였습니다.
+> yarn berry workspace 기능을 사용하였습니다.
 
 frontend 시작
 ```shell
