@@ -1,6 +1,9 @@
 {
-  "name": "TIL",
+  "name": "til",
   "version": "1.0.0",
+  "workspaces" : [
+    "packages/*"
+  ],
   "devDependencies": {
     "typescript": "^4.3.2"
   }
