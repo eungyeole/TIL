@@ -12,8 +12,12 @@ export const globalStyle = css`
     a{
         text-decoration: none;
     }
-    body{
+    html,body{
+        height: 100%;
         margin: 0;
+    }
+    #__next{
+        height: 100%;
     }
     :root{
         
