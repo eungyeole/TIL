@@ -1,6 +1,9 @@
 {
   "name": "til",
   "version": "1.0.0",
+  "scripts": {
+    "start:backend": "yarn workspace til-backend start"
+  },
   "workspaces": [
     "packages/*"
   ],
