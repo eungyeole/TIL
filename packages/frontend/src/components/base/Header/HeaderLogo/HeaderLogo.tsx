@@ -6,11 +6,10 @@ interface HeaderLogoProps{
     username : string
 }
 const HeaderLogo : FC<HeaderLogoProps> = ({username}) => {
-    const path = `/@${username}`
     return(
         <S.Block>
             <SlashIcon color="#eaeaea"></SlashIcon>
-            <Link href={path}>
+            <Link href={username}>
                 <a className="user-logo">
                     {username}
                 </a>

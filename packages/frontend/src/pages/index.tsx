@@ -8,7 +8,6 @@ export default function Home() {
   const [value, setValue] = useState<string>('');
   return (
     <>
-      <Header></Header>
     </>
   )
 }
