@@ -2953,13 +2953,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"add@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "add@npm:2.0.6"
-  checksum: 8599798e63565ee9acb4c0d79485501a60450491c47830fa7bee6ad4f311a880e8f8417deeb69804dbb54765246fd704d3e34fa4ab1b57ed70ae00344ee9d00f
-  languageName: node
-  linkType: hard
-
 "agent-base@npm:6":
   version: 6.0.2
   resolution: "agent-base@npm:6.0.2"
@@ -10946,11 +10939,14 @@ __metadata:
     "@types/react-syntax-highlighter": ^13.5.0
     codemirror: ^5.61.1
     next: 10.2.3
+    next-redux-wrapper: ^7.0.2
     react: 17.0.2
     react-dom: 17.0.2
     react-icons: ^4.2.0
     react-markdown: ^6.0.2
     react-syntax-highlighter: ^15.4.3
+    redux: ^4.1.0
+    typesafe-actions: ^5.1.0
     typescript: ^4.2.4
   languageName: unknown
   linkType: soft
@@ -10959,11 +10955,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "til@workspace:."
   dependencies:
-    add: ^2.0.6
-    next-redux-wrapper: ^7.0.2
-    redux: ^4.1.0
-    til-frontend: "workspace:packages/frontend"
-    typesafe-actions: ^5.1.0
     typescript: ^4.3.2
   languageName: unknown
   linkType: soft
