@@ -4,11 +4,13 @@ import * as S from './styles';
 import { AiFillGithub } from 'react-icons/ai';
 import { MdExpandMore } from 'react-icons/md'
 import Link from "next/link";
+import { useRouter } from "next/dist/client/router";
 interface WorkSpaceItemProps{}
 const WorkSpaceItem: FC<WorkSpaceItemProps> = () =>{
+    const history = useRouter();
     function test(e){
         e.preventDefault();
-        alert('test');
+        history.push('/write');
     }
     return(
         <Link href='test'>

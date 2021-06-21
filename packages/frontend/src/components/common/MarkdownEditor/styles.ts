@@ -4,12 +4,13 @@ export const MarkdownEditorBlock = styled.div`
     height: auto;
     font-size: 1.125rem;
     line-height: 1.5;
-    color: black;
+    flex: 1 1 0%;
+    color: #212529;
     font-family: 'Fira Mono', monospace;
     /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', */
     .cm-header {
       line-height: 2;
-      color: black;
+      color: #212529;
     }
     .cm-header-1 {
       font-size: 2.5rem;
@@ -27,10 +28,10 @@ export const MarkdownEditorBlock = styled.div`
     }
     .cm-strong,
     .cm-em {
-      color: black;
+      color: #212529;
     }
     .CodeMirror-placeholder {
-      color: black;
+      color: #adb5bd;
       font-style: italic;
     }
   }

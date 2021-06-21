@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import media from "../../../../lib/styles/media";
 export const Block = styled.div`    
     cursor: pointer;
     display: flex;
@@ -8,6 +9,12 @@ export const Block = styled.div`
         width: 28px;
         border: 1px solid #eaeaea;
         border-radius: 50%;
+    }
+    ${media.small}{
+        img {
+            height: 36px;
+            width: 36px;
+        }
     }
     svg {
         font-size: 1.5rem;

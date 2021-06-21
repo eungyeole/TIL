@@ -30,6 +30,7 @@ const MarkdownEditor : FC<MarkdownEditorProps> = ({style, className, onChangeMar
     const cm = CodeMirror.fromTextArea(textArea.current, {
       mode: 'markdown',
       theme: 'one-light',
+      placeholder : 'Writing your Learn',
       lineWrapping: true,
     });
     codemirror.current = cm;
