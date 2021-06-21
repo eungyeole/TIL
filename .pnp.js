@@ -12171,6 +12171,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["react-textarea-autosize", [
+        ["npm:8.3.3", {
+          "packageLocation": "./.yarn/cache/react-textarea-autosize-npm-8.3.3-ef925643e7-fa24eec062.zip/node_modules/react-textarea-autosize/",
+          "packageDependencies": [
+            ["react-textarea-autosize", "npm:8.3.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:8.3.3", {
+          "packageLocation": "./.yarn/$$virtual/react-textarea-autosize-virtual-f01016ae7e/0/cache/react-textarea-autosize-npm-8.3.3-ef925643e7-fa24eec062.zip/node_modules/react-textarea-autosize/",
+          "packageDependencies": [
+            ["react-textarea-autosize", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:8.3.3"],
+            ["@babel/runtime", "npm:7.14.6"],
+            ["@types/react", "npm:17.0.11"],
+            ["react", "npm:17.0.2"],
+            ["use-composed-ref", "virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.1.0"],
+            ["use-latest", "virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.2.0"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["read-pkg", [
         ["npm:5.2.0", {
           "packageLocation": "./.yarn/cache/read-pkg-npm-5.2.0-50426bd8dc-641102f095.zip/node_modules/read-pkg/",
@@ -13876,6 +13901,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-markdown", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:6.0.2"],
             ["react-outside-click-handler", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:1.3.0"],
             ["react-syntax-highlighter", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:15.4.3"],
+            ["react-textarea-autosize", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:8.3.3"],
             ["redux", "npm:4.1.0"],
             ["typesafe-actions", "npm:5.1.0"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
@@ -14034,6 +14060,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/trough-npm-1.0.5-791a6e37e5-c116d9e7dd.zip/node_modules/trough/",
           "packageDependencies": [
             ["trough", "npm:1.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ts-essentials", [
+        ["npm:2.0.12", {
+          "packageLocation": "./.yarn/cache/ts-essentials-npm-2.0.12-2c553d7b88-40556ad8f5.zip/node_modules/ts-essentials/",
+          "packageDependencies": [
+            ["ts-essentials", "npm:2.0.12"]
           ],
           "linkType": "HARD",
         }]
@@ -14614,6 +14649,74 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/use-npm-3.1.1-7ba643714c-8dd3bdeeda.zip/node_modules/use/",
           "packageDependencies": [
             ["use", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["use-composed-ref", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/use-composed-ref-npm-1.1.0-58fb6d3191-2cea8efcb7.zip/node_modules/use-composed-ref/",
+          "packageDependencies": [
+            ["use-composed-ref", "npm:1.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.1.0", {
+          "packageLocation": "./.yarn/$$virtual/use-composed-ref-virtual-2cb33f7965/0/cache/use-composed-ref-npm-1.1.0-58fb6d3191-2cea8efcb7.zip/node_modules/use-composed-ref/",
+          "packageDependencies": [
+            ["use-composed-ref", "virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.1.0"],
+            ["@types/react", "npm:17.0.11"],
+            ["react", "npm:17.0.2"],
+            ["ts-essentials", "npm:2.0.12"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["use-isomorphic-layout-effect", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/use-isomorphic-layout-effect-npm-1.1.1-f64e49c61c-a2db589f28.zip/node_modules/use-isomorphic-layout-effect/",
+          "packageDependencies": [
+            ["use-isomorphic-layout-effect", "npm:1.1.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:32834507b84c2f1ea54b49c006367b27092454e2239bb649dfc18b6f68601b2985a223232dabd806a08b314fc9d0f22ea2912b6b2e611c8a264d261d7b57ba82#npm:1.1.1", {
+          "packageLocation": "./.yarn/$$virtual/use-isomorphic-layout-effect-virtual-73362abb76/0/cache/use-isomorphic-layout-effect-npm-1.1.1-f64e49c61c-a2db589f28.zip/node_modules/use-isomorphic-layout-effect/",
+          "packageDependencies": [
+            ["use-isomorphic-layout-effect", "virtual:32834507b84c2f1ea54b49c006367b27092454e2239bb649dfc18b6f68601b2985a223232dabd806a08b314fc9d0f22ea2912b6b2e611c8a264d261d7b57ba82#npm:1.1.1"],
+            ["@types/react", "npm:17.0.11"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["use-latest", [
+        ["npm:1.2.0", {
+          "packageLocation": "./.yarn/cache/use-latest-npm-1.2.0-1bf12d0fd7-4d0e0543f1.zip/node_modules/use-latest/",
+          "packageDependencies": [
+            ["use-latest", "npm:1.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.2.0", {
+          "packageLocation": "./.yarn/$$virtual/use-latest-virtual-32834507b8/0/cache/use-latest-npm-1.2.0-1bf12d0fd7-4d0e0543f1.zip/node_modules/use-latest/",
+          "packageDependencies": [
+            ["use-latest", "virtual:f01016ae7eaa7335c64c497b3ecc656663c31dcf25315d4bd8dd1a6358a6bd630cd3f6fc2dfb4b349da54510938ba8ace40aac2512310a0c216af1dd1d03bb1c#npm:1.2.0"],
+            ["@types/react", "npm:17.0.11"],
+            ["react", "npm:17.0.2"],
+            ["use-isomorphic-layout-effect", "virtual:32834507b84c2f1ea54b49c006367b27092454e2239bb649dfc18b6f68601b2985a223232dabd806a08b314fc9d0f22ea2912b6b2e611c8a264d261d7b57ba82#npm:1.1.1"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]
