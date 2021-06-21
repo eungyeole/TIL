@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import RecentActivityItem from "../RecentActivityItem/RecentActivityItem";
 import WorkSpaceItem from "../WorkSpaceItem/WorkSpaceItem";
 import * as S from './styles'
 const dummy = [
