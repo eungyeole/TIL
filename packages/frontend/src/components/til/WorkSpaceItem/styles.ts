@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import media from "../../../lib/styles/media";
 import Button from "../../common/Button/Button";
 export const Block = styled.div`
     box-shadow: 0 5px 10px rgba(0,0,0,0.12);
@@ -7,6 +8,16 @@ export const Block = styled.div`
     display: flex;
     margin-bottom: 48px;
     flex-direction: column;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        transform: translateY(-5px);
+    }
+    ${media.small}{
+        &:hover{
+            transform: translateY(0px);
+        }
+    }
     & > .workspace-header{
         display: flex;
         align-items: center;
