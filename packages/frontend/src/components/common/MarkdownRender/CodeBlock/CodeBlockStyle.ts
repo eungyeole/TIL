@@ -2,7 +2,8 @@ const CodeBlockStyle={
     "hljs": {
         "display": "block",
         "overflowX": "auto",
-        "padding": "0.5em",
+        "padding": "16px",
+        "margin": "14px 0",
         "color": "#383a42",
         "background": "#fafafa"
     },
