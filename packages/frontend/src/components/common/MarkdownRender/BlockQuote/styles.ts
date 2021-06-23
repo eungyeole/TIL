@@ -6,5 +6,11 @@ export const Block = styled.blockquote`
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     padding: 1rem 1rem 1rem 2rem;
-    color: rgb(33, 37, 41);
+    & > p{
+        color: #212529;
+        margin-bottom: 5px;
+    }
+    &>:last-child{
+        margin-bottom: 0px;
+    }
 `
