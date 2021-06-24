@@ -1885,6 +1885,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/config@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "@nestjs/config@npm:0.6.3"
+  dependencies:
+    dotenv: 8.2.0
+    dotenv-expand: 5.1.0
+    lodash.get: 4.4.2
+    lodash.has: 4.5.2
+    lodash.set: 4.3.2
+    uuid: 8.3.2
+  peerDependencies:
+    "@nestjs/common": ^6.10.0 || ^7.0.0
+    reflect-metadata: ^0.1.12
+    rxjs: ^6.0.0
+  checksum: 2ec8f65044a532abf18a18cc026f32343785bafbfda26498ee235a19d90f1e5d923f41521116e709a0ee35a67f82f6b83c555fe130ab6571df87daaa27d17fb2
+  languageName: node
+  linkType: hard
+
 "@nestjs/core@npm:^7.6.15":
   version: 7.6.17
   resolution: "@nestjs/core@npm:7.6.17"
@@ -2620,6 +2638,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/validator@npm:^13.1.3":
+  version: 13.1.4
+  resolution: "@types/validator@npm:13.1.4"
+  checksum: 9e60c044017531dbf89d6f84bab2016aaa479aae2cad1dea0c3dc86ec10cc54ecc1bd4e6f1f908547ada885d366b29227dc72fd86356e5d2e2976b716eb640e4
+  languageName: node
+  linkType: hard
+
 "@types/yargs-parser@npm:*":
   version: 20.2.0
   resolution: "@types/yargs-parser@npm:20.2.0"
@@ -3310,7 +3335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:0.21.1":
+"axios@npm:0.21.1, axios@npm:^0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
   dependencies:
@@ -4023,6 +4048,17 @@ __metadata:
     isobject: ^3.0.0
     static-extend: ^0.1.1
   checksum: 6411679ad4d2bde81b62ad721d4771d108d5d8ef32805d10ebfa6f1d6bdcfd5cb6dfea5232b85221f079e42691c36cf2db05a5e76b87ba8f6deb37a2c23a4a41
+  languageName: node
+  linkType: hard
+
+"class-validator@npm:^0.13.1":
+  version: 0.13.1
+  resolution: "class-validator@npm:0.13.1"
+  dependencies:
+    "@types/validator": ^13.1.3
+    libphonenumber-js: ^1.9.7
+    validator: ^13.5.2
+  checksum: 09a7d83213ac40b2c57502790701277b323f0977d0e1d5597c1a5a0990a8c9ee04ab75b8e2395a39063c0ee9dd196e1cb900a420ff5808b8a1923de2b8c705fe
   languageName: node
   linkType: hard
 
@@ -4894,6 +4930,20 @@ __metadata:
     dom-serializer: 0
     domelementtype: 1
   checksum: a5b2f01fb3ff626073e3c3b43fedcff34073fb059b1235ee31cd0b5690d826304f41bc3fd117f95d754a1666ac3a57d224b408d83dd4f1c4525fd5b636d8df6f
+  languageName: node
+  linkType: hard
+
+"dotenv-expand@npm:5.1.0":
+  version: 5.1.0
+  resolution: "dotenv-expand@npm:5.1.0"
+  checksum: b895c6220d345db8f58dca439d3bc65c2ee538659df570ed3fa8c99487df854afd6d1ddadf1e43a4091c9ed6166956e7db7bc5a05cf48fa812c0772e1f5cf860
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:8.2.0":
+  version: 8.2.0
+  resolution: "dotenv@npm:8.2.0"
+  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
   languageName: node
   linkType: hard
 
@@ -7731,6 +7781,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"libphonenumber-js@npm:^1.9.7":
+  version: 1.9.20
+  resolution: "libphonenumber-js@npm:1.9.20"
+  checksum: 203a540688bba731aff612c579ddd3ecc1503cb5932db7389a87d654e5b1b4fc351911c1bb58e0e8e9c633edbcbe49d42ea548849dc8e19a444c0b964e0aa20b
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.1.6
   resolution: "lines-and-columns@npm:1.1.6"
@@ -7790,10 +7847,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.get@npm:4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: 447e575e3caa5131ef44e5a0c135b1614f3c937d86b3be0568f9da7b0fd015010af3b6b4e41edf6e2698c9ce2dcc061ca71b31f274f799c991dceb018be16e4f
+  languageName: node
+  linkType: hard
+
+"lodash.has@npm:4.5.2":
+  version: 4.5.2
+  resolution: "lodash.has@npm:4.5.2"
+  checksum: ed2cbed6f3f06fe2ae0a604464208a758197624810e58c4928de3ab9a00d2ac736ade10f49b6ea77f96c702f9d104189a57a7af0bfa1725e8554524aa9466f41
+  languageName: node
+  linkType: hard
+
 "lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: 4e2bb42a87a148991458d7c384bc197e96f7115e9536fc8e2c86ae9e99ce1c1f693ff15eb85761952535f48d72253aed8e673d9f32dde3e671cd91e3fde220a7
+  languageName: node
+  linkType: hard
+
+"lodash.set@npm:4.3.2":
+  version: 4.3.2
+  resolution: "lodash.set@npm:4.3.2"
+  checksum: 4dfedacae1c1cf86385a2b6e30ba538f06c90d703a0abd83a11432d80ec24b4016fe27359cdc0554a02a31a468789cbb282801dd755e54581cf0295477e2341d
   languageName: node
   linkType: hard
 
@@ -11281,6 +11359,7 @@ __metadata:
   dependencies:
     "@nestjs/cli": ^7.6.0
     "@nestjs/common": ^7.6.15
+    "@nestjs/config": ^0.6.3
     "@nestjs/core": ^7.6.15
     "@nestjs/platform-express": ^7.6.15
     "@nestjs/schematics": ^7.3.0
@@ -11291,6 +11370,8 @@ __metadata:
     "@types/supertest": ^2.0.10
     "@typescript-eslint/eslint-plugin": ^4.19.0
     "@typescript-eslint/parser": ^4.19.0
+    axios: ^0.21.1
+    class-validator: ^0.13.1
     eslint: ^7.22.0
     eslint-config-prettier: ^8.1.0
     eslint-plugin-prettier: ^3.3.1
@@ -12126,6 +12207,13 @@ typescript@4.2.3:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 940899bd4eacfa012ceecb10a5814ba0e8103da5243aa74d0d62f1f8a405efcd23e034fb7193e2d05b392870c53aabcb1f66439b062075cdcb28bc5d562a8ff6
+  languageName: node
+  linkType: hard
+
+"validator@npm:^13.5.2":
+  version: 13.6.0
+  resolution: "validator@npm:13.6.0"
+  checksum: 6ae43bfd47ae7e3ed5803c6fff949c5cbabb4d248af38fce0ccafb637c85db8c0c5cee2a91817242865de4f5970d61de809f0975910ec78282307ffd23249466
   languageName: node
   linkType: hard
 
