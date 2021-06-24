@@ -1,8 +1,7 @@
 import { UnauthorizedException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
-import { HttpErrorByCode } from '@nestjs/common/utils/http-error-by-code.util';
+import { ConfigService } from '@nestjs/config';
 import axios, { AxiosResponse } from 'axios';
-import { access } from 'fs';
 import { GithubCodeDto } from './user.dto';
 
 export interface IGithubUserTypes {
@@ -15,15 +14,18 @@ export interface IGithubUserTypes {
 
 @Injectable()
 export class UserService {
-    public async getGithubInfo(githubCodeDto: GithubCodeDto): Promise<IGithubUserTypes> {
-        const { code } = githubCodeDto;
 
+    constructor(
+        private readonly configService: ConfigService
+    ) {}
+
+    public async getGithubInfo({ code }: GithubCodeDto): Promise<IGithubUserTypes> {
         const getTokenUrl: string = 'https://github.com/login/oauth/access_token';
 
         const request = {
             code,
-            client_id: process.env.CLIENT_ID,
-            client_secret: process.env.CLIENT_SECRET,
+            client_id: this.configService.get('CLIENT_ID'),
+            client_secret: this.configService.get('CLIENT_SECRET'),
         };
 
         const response: AxiosResponse = await axios.post(getTokenUrl, request, {
@@ -46,16 +48,7 @@ export class UserService {
             },
         });
 
-        const { login, avator_url, name, bio, company } = data;
-
-        const githubInfo: IGithubUserTypes = {
-            githubId: login,
-            avator: avator_url,
-            name: name,
-            description: bio,
-            location: company,
-        };
-
-        return githubInfo;
+        const { login: githubId, avator_url: avator, name, bio: description, company: location } = data;
+        return { githubId, avator, name, description, location };
     }
 }
