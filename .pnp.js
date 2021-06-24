@@ -3101,7 +3101,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.21.1"],
             ["cache-manager", null],
             ["class-transformer", null],
-            ["class-validator", null],
+            ["class-validator", "npm:0.13.1"],
             ["iterare", "npm:1.2.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["rxjs", "npm:6.6.7"],
@@ -3117,6 +3117,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "cache-manager",
             "class-transformer",
             "class-validator",
+            "reflect-metadata",
+            "rxjs"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@nestjs/config", [
+        ["npm:0.6.3", {
+          "packageLocation": "./.yarn/cache/@nestjs-config-npm-0.6.3-4d8fb56634-2ec8f65044.zip/node_modules/@nestjs/config/",
+          "packageDependencies": [
+            ["@nestjs/config", "npm:0.6.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:0.6.3", {
+          "packageLocation": "./.yarn/$$virtual/@nestjs-config-virtual-de6888189c/0/cache/@nestjs-config-npm-0.6.3-4d8fb56634-2ec8f65044.zip/node_modules/@nestjs/config/",
+          "packageDependencies": [
+            ["@nestjs/config", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:0.6.3"],
+            ["@nestjs/common", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:7.6.17"],
+            ["@types/nestjs__common", null],
+            ["@types/reflect-metadata", null],
+            ["@types/rxjs", null],
+            ["dotenv", "npm:8.2.0"],
+            ["dotenv-expand", "npm:5.1.0"],
+            ["lodash.get", "npm:4.4.2"],
+            ["lodash.has", "npm:4.5.2"],
+            ["lodash.set", "npm:4.3.2"],
+            ["reflect-metadata", "npm:0.1.13"],
+            ["rxjs", "npm:6.6.7"],
+            ["uuid", "npm:8.3.2"]
+          ],
+          "packagePeers": [
+            "@nestjs/common",
+            "@types/nestjs__common",
+            "@types/reflect-metadata",
+            "@types/rxjs",
             "reflect-metadata",
             "rxjs"
           ],
@@ -4061,6 +4097,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-unist-npm-2.0.3-4b26dedfde-42e0dc4ac7.zip/node_modules/@types/unist/",
           "packageDependencies": [
             ["@types/unist", "npm:2.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/validator", [
+        ["npm:13.1.4", {
+          "packageLocation": "./.yarn/cache/@types-validator-npm-13.1.4-3437ab0404-9e60c04401.zip/node_modules/@types/validator/",
+          "packageDependencies": [
+            ["@types/validator", "npm:13.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -5796,6 +5841,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["class-validator", [
+        ["npm:0.13.1", {
+          "packageLocation": "./.yarn/cache/class-validator-npm-0.13.1-6dc5e76ff9-09a7d83213.zip/node_modules/class-validator/",
+          "packageDependencies": [
+            ["class-validator", "npm:0.13.1"],
+            ["@types/validator", "npm:13.1.4"],
+            ["libphonenumber-js", "npm:1.9.20"],
+            ["validator", "npm:13.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["classnames", [
         ["npm:2.2.6", {
           "packageLocation": "./.yarn/cache/classnames-npm-2.2.6-98e9901cf4-490eaeca59.zip/node_modules/classnames/",
@@ -6833,6 +6890,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["domutils", "npm:1.7.0"],
             ["dom-serializer", "npm:0.2.2"],
             ["domelementtype", "npm:1.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["dotenv", [
+        ["npm:8.2.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-8.2.0-6b21df4d37-16cb89cbd7.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:8.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["dotenv-expand", [
+        ["npm:5.1.0", {
+          "packageLocation": "./.yarn/cache/dotenv-expand-npm-5.1.0-c3fff50eb5-b895c6220d.zip/node_modules/dotenv-expand/",
+          "packageDependencies": [
+            ["dotenv-expand", "npm:5.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10041,6 +10116,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["libphonenumber-js", [
+        ["npm:1.9.20", {
+          "packageLocation": "./.yarn/cache/libphonenumber-js-npm-1.9.20-aeb0b00030-203a540688.zip/node_modules/libphonenumber-js/",
+          "packageDependencies": [
+            ["libphonenumber-js", "npm:1.9.20"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lines-and-columns", [
         ["npm:1.1.6", {
           "packageLocation": "./.yarn/cache/lines-and-columns-npm-1.1.6-23e74fab67-798b80ed7a.zip/node_modules/lines-and-columns/",
@@ -10118,11 +10202,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["lodash.get", [
+        ["npm:4.4.2", {
+          "packageLocation": "./.yarn/cache/lodash.get-npm-4.4.2-7bda64ed87-447e575e3c.zip/node_modules/lodash.get/",
+          "packageDependencies": [
+            ["lodash.get", "npm:4.4.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.has", [
+        ["npm:4.5.2", {
+          "packageLocation": "./.yarn/cache/lodash.has-npm-4.5.2-0a10673e08-ed2cbed6f3.zip/node_modules/lodash.has/",
+          "packageDependencies": [
+            ["lodash.has", "npm:4.5.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lodash.merge", [
         ["npm:4.6.2", {
           "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-4e2bb42a87.zip/node_modules/lodash.merge/",
           "packageDependencies": [
             ["lodash.merge", "npm:4.6.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lodash.set", [
+        ["npm:4.3.2", {
+          "packageLocation": "./.yarn/cache/lodash.set-npm-4.3.2-7586c942c2-4dfedacae1.zip/node_modules/lodash.set/",
+          "packageDependencies": [
+            ["lodash.set", "npm:4.3.2"]
           ],
           "linkType": "HARD",
         }]
@@ -14131,6 +14242,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["til-backend", "workspace:packages/backend"],
             ["@nestjs/cli", "npm:7.6.0"],
             ["@nestjs/common", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:7.6.17"],
+            ["@nestjs/config", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:0.6.3"],
             ["@nestjs/core", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:7.6.17"],
             ["@nestjs/platform-express", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:7.6.17"],
             ["@nestjs/schematics", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:7.3.1"],
@@ -14141,6 +14253,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.11"],
             ["@typescript-eslint/eslint-plugin", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:4.27.0"],
             ["@typescript-eslint/parser", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:4.27.0"],
+            ["axios", "npm:0.21.1"],
+            ["class-validator", "npm:0.13.1"],
             ["eslint", "npm:7.28.0"],
             ["eslint-config-prettier", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:1ae41d908e57ae1f52606ec30a1ecf6df9b63d6b51addb611aae2ddd65ab79582d759bc18199129c85832d2b0a4024a5b1e94eaa9ca3881460fd25638837ad36#npm:3.4.0"],
@@ -15138,6 +15252,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["validate-npm-package-license", "npm:3.0.4"],
             ["spdx-correct", "npm:3.1.1"],
             ["spdx-expression-parse", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["validator", [
+        ["npm:13.6.0", {
+          "packageLocation": "./.yarn/cache/validator-npm-13.6.0-2ca88b50f3-6ae43bfd47.zip/node_modules/validator/",
+          "packageDependencies": [
+            ["validator", "npm:13.6.0"]
           ],
           "linkType": "HARD",
         }]
