@@ -12,6 +12,12 @@ const markdown = `
 document.getElementById("")
 \`\`\`
 
+<style>
+    * {
+        background : black;
+    }
+</style>
+
 
 ### JWT 토큰이란?
 
