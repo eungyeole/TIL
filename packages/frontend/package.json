@@ -24,6 +24,7 @@
     "redux": "^4.1.0",
     "rehype-raw": "^5.1.0",
     "remark-gfm": "^1.0.0",
+    "sanitize-html": "^2.4.0",
     "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
