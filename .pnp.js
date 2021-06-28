@@ -4032,6 +4032,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/sanitize-html", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/@types-sanitize-html-npm-2.3.1-996e7623aa-c16e6ce2ba.zip/node_modules/@types/sanitize-html/",
+          "packageDependencies": [
+            ["@types/sanitize-html", "npm:2.3.1"],
+            ["htmlparser2", "npm:6.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/scheduler", [
         ["npm:0.16.1", {
           "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.1-9a58541608-0124c2e4de.zip/node_modules/@types/scheduler/",
@@ -14389,6 +14399,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.11"],
             ["@types/react-outside-click-handler", "npm:1.3.0"],
             ["@types/react-syntax-highlighter", "npm:13.5.0"],
+            ["@types/sanitize-html", "npm:2.3.1"],
             ["codemirror", "npm:5.61.1"],
             ["next", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:10.2.3"],
             ["next-redux-wrapper", "virtual:bf2734dbededee2937b9e47fe7ce891fadaaa4c7b397fc5020cf9613d1a503f577156e6b662a229e744b492c7c7d14dd45f1819bf663a17729bd4a180f611805#npm:7.0.2"],

@@ -2579,6 +2579,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/sanitize-html@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@types/sanitize-html@npm:2.3.1"
+  dependencies:
+    htmlparser2: ^6.0.0
+  checksum: c16e6ce2ba592cb9b3ec691044bcab7594a049bdfda578c2201b454dc0969fa7a26990f8242a004a48440d6febf68a92ef9d2c9fbdbf4cdfa47d73459858284b
+  languageName: node
+  linkType: hard
+
 "@types/scheduler@npm:*":
   version: 0.16.1
   resolution: "@types/scheduler@npm:0.16.1"
@@ -4953,6 +4962,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"domutils@npm:^2.5.2":
+  version: 2.7.0
+  resolution: "domutils@npm:2.7.0"
+  dependencies:
+    dom-serializer: ^1.0.1
+    domelementtype: ^2.2.0
+    domhandler: ^4.2.0
+  checksum: b7c6cbd4854611447785cdc10f989728cc213652c89211b7d0956c37e565b8a2881683a0162b9a77aa39f52de1eff10f439fe77315d3e828beda3b81a43c1dea
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -4964,17 +4984,6 @@ __metadata:
   version: 8.2.0
   resolution: "dotenv@npm:8.2.0"
   checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
-  languageName: node
-  linkType: hard
-
-"domutils@npm:^2.5.2":
-  version: 2.7.0
-  resolution: "domutils@npm:2.7.0"
-  dependencies:
-    dom-serializer: ^1.0.1
-    domelementtype: ^2.2.0
-    domhandler: ^4.2.0
-  checksum: b7c6cbd4854611447785cdc10f989728cc213652c89211b7d0956c37e565b8a2881683a0162b9a77aa39f52de1eff10f439fe77315d3e828beda3b81a43c1dea
   languageName: node
   linkType: hard
 
@@ -11498,6 +11507,7 @@ __metadata:
     "@types/react": ^17.0.11
     "@types/react-outside-click-handler": ^1.3.0
     "@types/react-syntax-highlighter": ^13.5.0
+    "@types/sanitize-html": ^2.3.1
     codemirror: ^5.61.1
     next: 10.2.3
     next-redux-wrapper: ^7.0.2
