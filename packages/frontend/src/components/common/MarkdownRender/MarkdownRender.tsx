@@ -90,7 +90,7 @@ function filter(html: string) {
       },
     },
     allowedIframeHostnames: ['www.youtube.com', 'codesandbox.io', 'codepen.io'],
-  }).replaceAll('&gt;', '>');
+  }).replace(/&gt;/g, '>');
 }
 
 const Block = styled.div`
