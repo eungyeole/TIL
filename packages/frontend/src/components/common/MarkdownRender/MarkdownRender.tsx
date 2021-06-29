@@ -16,7 +16,7 @@ interface MarkdownRender{
 const MarkdownRender:FC<MarkdownRender> = ({markdown}) => {
   return(
     <Block>
-      <ReactMarkdown rehypePlugins={[rehypeRaw, filter]} remarkPlugins={[gfm]} components={{
+      <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} components={{
         blockquote : BlockQuote,
         code : CodeBlock
       }}>{filter(markdown)}</ReactMarkdown>
