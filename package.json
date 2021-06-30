@@ -9,5 +9,8 @@
   ],
   "devDependencies": {
     "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "mysql2": "^2.2.5"
   }
 }
