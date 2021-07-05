@@ -32,6 +32,7 @@ export const Block = styled.div`
                 object-fit: cover;
             }
             & > h3{
+                font-weight: 600;
                 margin-left: 10px;
             }
         }

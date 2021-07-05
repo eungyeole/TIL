@@ -2,10 +2,10 @@ import { css } from "@emotion/react";
 
 export const globalStyle = css`
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
     *{
         margin: 0;
         padding: 0;
-        font-family: 'Noto Sans KR', sans-serif;
         box-sizing: border-box;
     }
     a{
@@ -14,6 +14,8 @@ export const globalStyle = css`
     html,body{
         height: 100%;
         margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
+
     }
     #__next{
         height: 100%;

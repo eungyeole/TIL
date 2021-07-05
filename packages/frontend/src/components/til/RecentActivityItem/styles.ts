@@ -9,7 +9,6 @@ export const Block = styled.div`
         height: 30px;
         border-radius: 50%;
         object-fit: cover;
-        transform: translateY(-40%);
     }
     & > .activity-info{
         margin-left: 10px;
@@ -24,7 +23,7 @@ export const Block = styled.div`
                     cursor: pointer;
                 }
                 color: #000000;
-                font-weight: bold;
+                font-weight: 500;
             }
         }
         & > .created_at{

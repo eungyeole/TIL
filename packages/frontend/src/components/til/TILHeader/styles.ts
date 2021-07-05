@@ -24,7 +24,7 @@ export const UserBlock = styled.div`
     display: flex;
     flex-direction: column;
     & > .user-name {
-        font-weight : bold;
+        font-weight : 600;
         color : #212529;
         font-size: 31px;
     }
@@ -32,6 +32,7 @@ export const UserBlock = styled.div`
         max-width: 450px;
         font-size: 16px;
         color : #495057;
+        margin-top: 5px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;

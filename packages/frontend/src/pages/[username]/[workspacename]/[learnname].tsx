@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetServerSidePropsContext, NextPage } from "next";
 import Header from "../../../components/base/Header/Header";
 import MarkdownRender from "../../../components/common/MarkdownRender/MarkdownRender";
 import MainResponsive from "../../../components/main/MainResponsive/MainResponsive";
@@ -11,6 +11,12 @@ const markdown = `
 \`\`\`javascript
 document.getElementById("")
 \`\`\`
+
+<style>
+    * {
+        background : black;
+    }
+</style>
 
 
 ### JWT 토큰이란?
@@ -127,8 +133,11 @@ JSON의 **key-value 형태** 로 여러개의 정보를 담을 수 있다.
 
   > 토큰은 인증이 필요한 모든 요청에서 헤더에 정보가 담겨서 간다.
 `
+interface LearnPageProps {
+    learnname : string
+}
 
-const LearnPage: NextPage = () => {
+const LearnPage: NextPage<LearnPageProps> = ({learnname}) => {
     return(
         <div>
             <Header></Header>
@@ -138,4 +147,16 @@ const LearnPage: NextPage = () => {
         </div>
     )
 }
+
+
+export async function getServerSideProps(context : GetServerSidePropsContext){
+    const { learnname } = context.query;
+    return {
+        props : {
+            learnname : learnname
+        }
+    }
+}
 export default LearnPage;
+
+

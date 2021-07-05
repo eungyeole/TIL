@@ -11,6 +11,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@svgr/webpack": "^5.5.0",
+    "@types/sanitize-html": "^2.3.1",
     "codemirror": "^5.61.1",
     "next": "10.2.3",
     "next-redux-wrapper": "^7.0.2",
@@ -24,6 +25,7 @@
     "redux": "^4.1.0",
     "rehype-raw": "^5.1.0",
     "remark-gfm": "^1.0.0",
+    "sanitize-html": "^2.4.0",
     "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
