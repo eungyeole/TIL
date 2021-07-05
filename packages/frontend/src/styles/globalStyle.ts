@@ -6,7 +6,6 @@ export const globalStyle = css`
     *{
         margin: 0;
         padding: 0;
-        /* font-family: 'Noto Sans KR', sans-serif; */
         box-sizing: border-box;
     }
     a{
