@@ -1,5 +1,5 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { GithubCodeDto } from './user.dto';
+import { GithubCodeDto } from './dto/code.dto';
 import { UserService } from './user.service';
 
 @Controller('user')
@@ -8,15 +8,15 @@ export class UserController {
     private readonly userService: UserService,
     ){}
 
-    @Post('/github-info')
-    public async getGithubInfo(@Body() githubCodeDto: GithubCodeDto) {
-        const user = await this.userService.getGithubInfo(githubCodeDto);
+    @Post('/register')
+    public async register(@Body() githubCodeDto: GithubCodeDto) {
+        const token = await this.userService.register(githubCodeDto);
 
         return {
             status: 200,
-            message: '깃허브 유저정보 조회',
+            message: '로그인',
             data: {
-                user,
+                token,
             },
         };
     }
