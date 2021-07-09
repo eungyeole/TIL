@@ -7,17 +7,18 @@ import { UserRepository } from './entity/user.repo';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
+
 @Module({
     imports: [
         TypeOrmModule.forFeature([UserRepository]),
         JwtModule.registerAsync({
-            imports: [ConfigModule],
-            useFactory: (config: ConfigService) => ({
-                secret: config.get("JWT_SECRET_KEY"),
-                signOptions: {expiresIn: '120m'},
-            }),
-            inject: [ConfigService]
-        }),
+                        imports: [ConfigModule],
+                        useFactory: (config: ConfigService) => ({
+                            secret: config.get("DEVELOPMENT_DATABASE_USER"),
+                        }),
+                        inject: [ConfigService]
+                    }),
+        ConfigModule,
     ],
     controllers: [UserController],
     providers: [
@@ -25,3 +26,4 @@ import { UserService } from './user.service';
     ],
 })
 export class UserModule {}
+
