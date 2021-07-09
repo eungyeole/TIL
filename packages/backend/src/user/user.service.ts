@@ -1,8 +1,7 @@
 import { UnauthorizedException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { ConfigService } from '../shared/config/config.service';
 import { JwtService } from '@nestjs/jwt';
-import { InjectRepository } from '@nestjs/typeorm';
 import axios, { AxiosResponse } from 'axios';
 import { GithubCodeDto } from './dto/code.dto';
 import { TokenDto } from './dto/token.dto';
@@ -31,6 +30,7 @@ export class UserService {
     public async oauthLink(): Promise<string> {
         return 'https://github.com/login/oauth/authorize?scope=' + UserService.scope + '&client_id=' + this.configService.get('CLIENT_ID');
     }
+
 
     public async login({ code }: GithubCodeDto): Promise<TokenDto> {
         const getTokenUrl: string = 'https://github.com/login/oauth/access_token';
@@ -68,10 +68,23 @@ export class UserService {
         if(await this.userRepository.findById(id) === undefined){
             user = await this.userRepository.saveUser({id, profileImage, name, description, location});
         }else user = await this.userRepository.findById(id);
+        
+        console.log(`${this.configService.get("JWT_ACCESS_EXPIRE")}s`);
+
+        const accessToken: string =  this.jwtService.sign({id}, {
+            secret: this.configService.get("JWT_SECRET_KEY"),
+            expiresIn: `${this.configService.get("JWT_ACCESS_EXPIRE")}s`
+        });
+
+        const refreshToken: string =  this.jwtService.sign({id}, {
+            secret: this.configService.get("JWT_SECRET_KEY"),
+            expiresIn: `${this.configService.get("JWT_REFRESH_EXPIRE")}s`
+        });
 
         //토큰 제작
-        return {
-            accessToken: this.jwtService.sign({id})
-        }
+        return ({
+            accessToken,
+            refreshToken
+        })
     }
 }
