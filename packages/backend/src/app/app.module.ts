@@ -5,11 +5,11 @@ import { UserModule } from '../user/user.module';
 
 @Module({
   imports: [
+    UserModule,
+    TypeOrmConfigModule,
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    UserModule,
-    TypeOrmConfigModule,
     ],
   controllers: [],
   providers: [],
