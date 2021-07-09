@@ -2,6 +2,7 @@ import { UnauthorizedException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { InjectRepository } from '@nestjs/typeorm';
 import axios, { AxiosResponse } from 'axios';
 import { GithubCodeDto } from './dto/code.dto';
 import { TokenDto } from './dto/token.dto';
@@ -25,7 +26,13 @@ export class UserService {
         private readonly jwtService: JwtService,
     ) {}
 
-    public async register({ code }: GithubCodeDto): Promise<TokenDto> {
+    private static scope: string = 'repo,user'
+
+    public async oauthLink(): Promise<string> {
+        return 'https://github.com/login/oauth/authorize?scope=' + UserService.scope + '&client_id=' + this.configService.get('CLIENT_ID');
+    }
+
+    public async login({ code }: GithubCodeDto): Promise<TokenDto> {
         const getTokenUrl: string = 'https://github.com/login/oauth/access_token';
 
         const request = {
