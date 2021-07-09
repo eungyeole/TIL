@@ -1,24 +1,23 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { GithubCodeDto } from './dto/code.dto';
 import { UserService } from './user.service';
 
-@Controller('user')
+@Controller('/users')
 export class UserController {
     constructor(
     private readonly userService: UserService,
     ){}
 
-    @Post('/register')
-    public async register(@Body() githubCodeDto: GithubCodeDto) {
-        const token = await this.userService.register(githubCodeDto);
+    @Get('/oauth')
+    public async oauthLink(): Promise<string> {
+        return this.userService.oauthLink();
+    }
 
-        return {
-            status: 200,
-            message: '로그인',
-            data: {
-                token,
-            },
-        };
+    @Post('/login')
+    public async login(@Body() githubCodeDto: GithubCodeDto) {
+        const token = await this.userService.login(githubCodeDto);
+
+        return (token);
     }
 
 }
