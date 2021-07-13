@@ -4,16 +4,17 @@ import { ConfigService } from '../shared/config/config.service';
 import { JwtService } from '@nestjs/jwt';
 import axios, { AxiosResponse } from 'axios';
 import { GithubCodeDto } from './dto/code.dto';
-import { TokenDto } from './dto/token.dto';
+import { LoginDto } from './dto/login.dto';
 import { User } from './entity/user.entity';
 import { UserRepository } from './entity/user.repo';
+import { RefreshToken } from './dto/refresh.dto';
 
-export interface IGithubUserTypes {
-    id: string;
-    profileImage: string;
-    name: string;
+
+export interface IGithubRepoTypes {
+    url: string;
     description: string;
-    location: string;
+    updated_at: Date;
+    language: string;
 }
 
 @Injectable()
@@ -32,7 +33,7 @@ export class UserService {
     }
 
 
-    public async login({ code }: GithubCodeDto): Promise<TokenDto> {
+    public async login({ code }: GithubCodeDto): Promise<LoginDto> {
         const getTokenUrl: string = 'https://github.com/login/oauth/access_token';
 
         const request = {
@@ -53,38 +54,52 @@ export class UserService {
 
         const { access_token } = response.data;
 
-        const getUserUrl: string = 'https://api.github.com/user';
+        const getUserUrl: string = 'https://api.github.com/';
 
-        const { data } = await axios.get(getUserUrl, {
+        const userInfoRes = await axios.get(getUserUrl + 'user', {
             headers: {
                 Authorization: `token ${access_token}`,
             },
         });
 
-        const { login: id, avatar_url: profileImage, name, bio: description, company: location } = data;
+        const { login: id, avatar_url: profileImage, name, bio: description, company: location } = userInfoRes.data;
+
+        const repoInfoRes = await axios.get(getUserUrl + 'users/leeseojune53/repos', {
+            headers: {
+                Authorization: `token ${access_token}`,
+            },
+        });
 
         let user: User;
+        let repositories: string[];
         
         if(await this.userRepository.findById(id) === undefined){
             user = await this.userRepository.saveUser({id, profileImage, name, description, location});
         }else user = await this.userRepository.findById(id);
         
-        console.log(`${this.configService.get("JWT_ACCESS_EXPIRE")}s`);
+        if(user.repository === null) 
+            repositories = repoInfoRes.data.map(res => res.name);
 
-        const accessToken: string =  this.jwtService.sign({id}, {
+        const accessToken: string =  this.jwtService.sign({id: id, type: 'accessToken'}, {
             secret: this.configService.get("JWT_SECRET_KEY"),
             expiresIn: `${this.configService.get("JWT_ACCESS_EXPIRE")}s`
         });
 
-        const refreshToken: string =  this.jwtService.sign({id}, {
+        const refreshToken: string =  this.jwtService.sign({id: id, type: 'refreshToken'}, {
             secret: this.configService.get("JWT_SECRET_KEY"),
             expiresIn: `${this.configService.get("JWT_REFRESH_EXPIRE")}s`
         });
 
-        //토큰 제작
         return ({
             accessToken,
-            refreshToken
-        })
+            refreshToken,
+            repositories
+        });
     }
+
+    // public async refreshToken(refreshToken: RefreshToken): Promise<TokenDto> {
+
+    //     this.jwtService.decode(refreshToken.refreshToken)
+
+    // }
 }
