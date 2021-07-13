@@ -15,9 +15,7 @@ export class UserController {
 
     @Post('/login')
     public async login(@Body() githubCodeDto: GithubCodeDto) {
-        const token = await this.userService.login(githubCodeDto);
-
-        return (token);
+        return await this.userService.login(githubCodeDto);
     }
 
 }
