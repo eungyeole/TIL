@@ -8,7 +8,7 @@ export class UserRepository extends Repository<User> {
     private newUser: User;
 
     public async findById(id: string): Promise<User> {
-        return await this.findOne({id});
+        return this.findOne({id});
     }
 
     public async saveRepository(id: string, repository: string): Promise<User> {
