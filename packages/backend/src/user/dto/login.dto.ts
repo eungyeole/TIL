@@ -1,6 +1,8 @@
-export class TokenDto {
+export class LoginDto {
 
     accessToken: string;
     refreshToken: string;
+
+    repositories: string[];
 
 }
