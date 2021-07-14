@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserRepository } from './entity/user.repo';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
+import { RedisModule } from 'src/shared/redis/redis.module';
 
 
 @Module({
@@ -19,6 +20,7 @@ import { UserService } from './user.service';
                         inject: [ConfigService]
                     }),
         ConfigModule,
+        RedisModule,
     ],
     controllers: [UserController],
     providers: [
