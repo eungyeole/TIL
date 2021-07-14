@@ -8,6 +8,7 @@ import { LoginDto } from './dto/login.dto';
 import { User } from './entity/user.entity';
 import { UserRepository } from './entity/user.repo';
 import { RefreshToken } from './dto/refresh.dto';
+import { RedisService } from 'src/shared/redis/redis.service';
 
 
 export interface IGithubRepoTypes {
@@ -24,6 +25,7 @@ export class UserService {
         private readonly configService: ConfigService,
         private readonly userRepository: UserRepository,
         private readonly jwtService: JwtService,
+        private readonly redisService: RedisService,
     ) {}
 
     private static scope: string = 'repo,user'
@@ -89,6 +91,8 @@ export class UserService {
             secret: this.configService.get("JWT_SECRET_KEY"),
             expiresIn: `${this.configService.get("JWT_REFRESH_EXPIRE")}s`
         });
+
+        this.redisService.set(user.id, refreshToken, this.configService.get("JWT_REFRESH_EXPIRE"));
 
         return ({
             accessToken,
