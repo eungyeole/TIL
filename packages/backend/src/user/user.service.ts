@@ -1,4 +1,4 @@
-import { UnauthorizedException } from '@nestjs/common';
+import { BadRequestException, UnauthorizedException } from '@nestjs/common';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '../shared/config/config.service';
 import { JwtService } from '@nestjs/jwt';
@@ -7,7 +7,7 @@ import { GithubCodeDto } from './dto/code.dto';
 import { LoginDto } from './dto/login.dto';
 import { User } from './entity/user.entity';
 import { UserRepository } from './entity/user.repo';
-import { RefreshToken } from './dto/refresh.dto';
+import { RefreshRes, RefreshToken } from './dto/refresh.dto';
 import { RedisService } from 'src/shared/redis/redis.service';
 
 
@@ -82,10 +82,7 @@ export class UserService {
         if(user.repository === null) 
             repositories = repoInfoRes.data.map(res => res.name);
 
-        const accessToken: string =  this.jwtService.sign({id: id, type: 'accessToken'}, {
-            secret: this.configService.get("JWT_SECRET_KEY"),
-            expiresIn: `${this.configService.get("JWT_ACCESS_EXPIRE")}s`
-        });
+        const accessToken: string =  this.generateAccessToken(id);
 
         const refreshToken: string =  this.jwtService.sign({id: id, type: 'refreshToken'}, {
             secret: this.configService.get("JWT_SECRET_KEY"),
@@ -101,9 +98,33 @@ export class UserService {
         });
     }
 
-    // public async refreshToken(refreshToken: RefreshToken): Promise<TokenDto> {
+    public async refreshToken(refreshTokenDto: RefreshToken): Promise<RefreshRes> {
 
-    //     this.jwtService.decode(refreshToken.refreshToken)
+        const token = this.jwtService.verify(refreshTokenDto.refreshToken, {
+            secret: this.configService.get("JWT_SECRET_KEY")
+        });
 
-    // }
+        if(token.type != 'refreshToken')
+            throw new BadRequestException();
+
+        
+        this.redisService.set(token.id, refreshTokenDto.refreshToken,
+             this.configService.get("JWT_REFRESH_EXPIRE"));
+
+        const accessToken = this.generateAccessToken(token.id);
+        const refreshToken = refreshTokenDto.refreshToken;
+        
+        return ({
+            accessToken,
+            refreshToken
+        });
+
+    }
+
+    private generateAccessToken(id: string): string {
+        return this.jwtService.sign({id: id, type: 'accessToken'}, {
+            secret: this.configService.get("JWT_SECRET_KEY"),
+            expiresIn: `${this.configService.get("JWT_ACCESS_EXPIRE")}s`
+        });
+    }
 }
